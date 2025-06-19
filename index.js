@@ -8,14 +8,13 @@ app.set("view engine","ejs")
 
 app.use(express.json())
 app.use(express.urlencoded())
-
 let data = []
 
 app.post("/insert",(req,res)=>{
-    console.log(req.body)
-
+    data.push(req.body)
+    console.log(data)
     res.render("index",{
-        data: req.body
+        data
     })
     
 })

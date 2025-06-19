@@ -27,13 +27,25 @@
 
             <div>
                 <div class="content">
-                    <div class="row">
-                  
-                             <div class="col">
-                                <%= data.task%>
-                             </div>
-            
-                    </div>
+                    <table class="table">
+                    <tr>
+                        <th>Tasks</th>
+                        <th>delete</th>
+                    </tr>
+                        <% data.map((ele)=>{ %>
+                                <tr>
+                                    <td>
+
+                                    <%= ele.task%>
+                        </td>
+                                    <td>
+
+                                   <a href=""><button>🗑️</button></a>
+                        </td>
+                    </tr>
+                           
+                            <%   })%>
+                        </table>
                 </div>
             </div>
         </div>
